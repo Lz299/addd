@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		:root {
+		    --border-width: 10px;
+		}
+			.gradient-border{
+			    border-radius: var(--border-width);
+			}
+			
+			.gradient-border {
+			    --border-width: 10px;
+			    position: relative;
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    width: 500px;
+			    height: 345px;
+			    font-family: Lato, sans-serif;
+			    font-size: 2.5rem;
+			    text-transform: uppercase;
+			    color: white;
+			    background: #222;
+			    border-radius: var(--border-width);
+			margin: 0 auto;
+			}
+			
+			.gradient-border::after {
+			    position: absolute;
+			    content: "";
+			    top: calc(-1 * var(--border-width));
+			    left: calc(-1 * var(--border-width));
+			    z-index: -1;
+			    width: calc(100% + var(--border-width) * 2);
+			    height: calc(100% + var(--border-width) * 2);
+			    background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+			    background-size: 300% 300%;
+			    background-position: 0 50%;
+			    border-radius: calc(2 * var(--border-width));
+			    animation: moveGradient 4s alternate infinite;
+			}
+			
+			@keyframes moveGradient {
+			    50% {
+			        background-position: 100% 50%;
+			    }
+			
+			}
+			body{
+				background-color: #222;
+			}
+			
+			
+			.n{
+										 width: 500px;
+										 color: white;
+										
+			}
+			.n div{
+										  background-color: #189bf2;
+										  color: white;
+										  height: 40px;
+										  line-height: 40px;
+										  font-weight: bold;
+										  padding-left: 10px;
+										  
+										  
+			}
+			.n ul{
+										 border: solid 1px #189bf2;
+										 margin: 0;
+										 line-height: 2em;
+										font-size:  18px;
+			}
+			.n ul li{
+										  overflow: hidden;
+										 white-space: nowrap;
+										 text-overflow: ellipsis;
+										 list-style-position: inside;
+										padding: 0 10px 0 15px;
+										margin: 0;
+										border-bottom: dotted 2px #eee;
+										
+										
+			}
+			.n a{
+										 text-decoration: none;
+										color: white;
+										 
+			}
+			.n a:hover{
+										 color: red;
+										 
+			}			
+		</style>
+	</head>
+	<body>
+		<div class="gradient-border">			
+			<section class="n">
+				<div>校园新闻</div>
+				<ul>
+					<li><a href="#">喜讯！我校教师在首届全国高校教师教学创新大赛总决赛中再创佳绩！</a></li>
+					<li><a href="#">我校乌兰牧骑合唱团参加全区“永远跟党走”专业合唱团比赛获奖</a></li>
+					<li><a href="#">我校承办第四届21世纪当代中国马克思主义高端论坛</a></li>
+					<li><a href="lh.html">李航有对象了</a></li>
+					<li><a href="rlf.html">任利峰有对象了</a></li>
+					<li><a href="tc.html">佟超还没有对象</a></li>
+					<li><a href="#">我校圆满完成核酸检验工作！</a></li>
+					<li><a href="#">我校2门课程入选自治区高校美育公共艺术教育精品课</a></li>					
+				</ul>			
+			</section>
+		</div>		
+	</body>
+</html>
